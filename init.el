@@ -7,6 +7,10 @@
 
 (defvar my-packages 
   '(starter-kit 
+     evil
+     geiser
+     paredit
+     quack
      starter-kit-lisp 
      starter-kit-bindings 
      clojure-mode 
@@ -28,7 +32,9 @@
 (evil-mode 1)
 
 ; @see https://github.com/bbatsov/solarized-emacs/issues/18
-;(require 'solarized-dark-theme)
+(require 'solarized-dark-theme)
+(setq solarized-termcolor 16)
+(setq solarized-use-terminal-theme t)
 
 (autoload 'enable-paredit-mode "paredit" "Turn on pseudo-structural editing of Lisp code.")
 (add-hook 'emacs-lisp-mode-hook       #'enable-paredit-mode)
